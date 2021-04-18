@@ -1,0 +1,18 @@
+name: Deploy
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{runner.OS}}-${{hashFiles('yarn.lock')}}
+      - uses: storyn26383/github-actions-hexo@v1.4
+        with:
+          deploykey: ${{secrets.DEPLOY_KEY}}
+          username: storyn26383
+          email: storyn26383@gmail.com
