@@ -2,7 +2,7 @@
 title: 設計模式 - 偷懶工廠模式
 date: 2021-04-18 23:15:34
 tags:
-  - 設計模式
+  - DesignPattern
   - PHP
 ---
 
@@ -13,7 +13,7 @@ tags:
 
 <!--more-->
 
-## 簡單工廠模式
+## 簡單工廠模式（Simple Factory Pattern）
 
 首先讓我們複習一下簡單工廠模式：
 
@@ -40,7 +40,7 @@ $sqliteClient = DatabaseClientFactory::create('SQLite');
 
 簡單工廠最大的缺點就是：擴充時需要修改 `DatabaseClientFactory`，違反了開放封閉原則。
 
-## 工廠模式
+## 工廠模式（Factory Pattern）
 
 為了要符合開放封閉原則，因此我們改用工廠模式：
 

@@ -2,7 +2,7 @@
 title: 設計模式 - 代理模式 x 快取 x Metaprogramming
 date: 2021-04-20 22:03:18
 tags:
-  - 設計模式
+  - DesignPattern
   - PHP
   - Cache
   - Metaprogramming
@@ -14,7 +14,7 @@ tags:
 
 <!--more-->
 
-## 傳統 Proxy
+## 傳統代理模式（Proxy Pattern）
 
 我們先來看看傳統的寫法
 
