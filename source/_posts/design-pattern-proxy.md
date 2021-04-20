@@ -82,8 +82,8 @@ $proxy = new Proxy;
 $proxy->getFoo(); // string(6) "getFoo"
 ```
 
-從上面的例子可以發現，`Proxy` 中明明就沒有 `getFoo()` 的 Method，但第 10 行的程式卻不會出錯，反而還有印出結果，為什麼呢？
-這是因為 `Proxy` 有 `__call()` 的 Method，只要呼叫了沒有宣告過的 Method，就會往 `__call()` 跑。
+從上面的例子可以發現，`Proxy` 中明明就沒有 `getFoo()` 這個 Method，但第 10 行的程式卻不會出錯，反而還有印出結果，為什麼呢？
+這是因為 `Proxy` 有 `__call()` 這個 Method，只要呼叫了沒有宣告過的 Method，就會往 `__call()` 跑。
 
 此時我們就可以利用這個特性來改寫我們的快取代理：
 
